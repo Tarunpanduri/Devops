@@ -4,3 +4,4 @@ file.write("We can write multiple lines into it.\n")
 file.close()
 
 print("File written successfully.")
+

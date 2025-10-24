@@ -1,0 +1,5 @@
+flask_api/.venv
+
+flask_api/.vscode
+
+flask_api/backend/.env
