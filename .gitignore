@@ -1,3 +1,5 @@
 flask_api/.vscode
 
 flask_api/backend/.env
+
+.venv
