@@ -2,6 +2,7 @@
 .venv
 flask_api/backend/.env
 flask_api/.vscode
+venv
 
 # Aws
 # Aws S3 Buckets
