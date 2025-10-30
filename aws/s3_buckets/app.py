@@ -1,6 +1,7 @@
 import boto3
 from dotenv import load_dotenv
 import os
+import requests
 load_dotenv()
 s3 = boto3.client('s3', 
                   aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'), 
@@ -31,3 +32,14 @@ response = s3.list_objects_v2(Bucket='devops-s3-buckets')
 print('Files in bucket:')
 for obj in response.get('Contents', []):
     print(f'  {obj["Key"]}')    
+
+
+#using public urls to programatic logic
+url = "https://devops-s3-buckets.s3.ap-south-1.amazonaws.com/Aadhaar.txt"
+resp = requests.get(url)
+if resp.status_code == 200:
+    with open('Aadhaar_downloaded.txt', 'wb') as f:
+        f.write(resp.content)
+        print("Download Successful!")
+else:
+    print("Download failed:", resp.status_code, resp.text)  

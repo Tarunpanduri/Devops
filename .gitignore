@@ -14,3 +14,12 @@ aws/s3_buckets/env/
 aws/s3_buckets/.env
 aws/s3_buckets/.env
 aws/credentials
+
+# parameter store aws
+aws/parameter_store/.env
+aws/parameter_store/__pycache__/
+aws/parameter_store/*.pyc
+aws/parameter_store/*.pyo
+aws/parameter_store/*.pyd       
+aws/parameter_store/env/
+aws/parameter_store/.env
