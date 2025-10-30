@@ -2,3 +2,14 @@
 .venv
 flask_api/backend/.env
 flask_api/.vscode
+
+# Aws
+# Aws S3 Buckets
+aws/s3_buckets/__pycache__/
+aws/s3_buckets/*.pyc
+aws/s3_buckets/*.pyo
+aws/s3_buckets/*.pyd
+aws/s3_buckets/env/
+aws/s3_buckets/.env
+aws/s3_buckets/.env
+aws/credentials
