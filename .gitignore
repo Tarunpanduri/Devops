@@ -23,7 +23,7 @@ aws/parameter_store/*.pyo
 aws/parameter_store/*.pyd       
 aws/parameter_store/env/
 
-
+#ec2_ecs
 aws/ec2_ecs/task1
 aws/ec2_ecs/task2
 aws/ec2_ecs/task3
