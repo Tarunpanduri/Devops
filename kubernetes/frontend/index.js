@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 app.post('/submit', async (req, res) => {
   try {
     const { name, email } = req.body;
-    const response = await axios.post('http://backend:5000/submit', { name, email });
+    const response = await axios.post('http://k8s-backend:5000/submit', { name, email });
     res.send(`<h3>${response.data.message}</h3>`);
   } catch (err) {
     res.status(500).send(`<h3>Error: ${err.message}</h3>`);

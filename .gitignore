@@ -27,3 +27,8 @@ aws/parameter_store/env/
 aws/ec2_ecs/task1
 aws/ec2_ecs/task2
 aws/ec2_ecs/task3
+
+
+# K8S
+kubernetes/backend/.env
+kubernetes/frontend/node_modules
