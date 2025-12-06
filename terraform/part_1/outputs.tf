@@ -4,6 +4,6 @@ output "app_url" {
 }
 
 output "ssh_command" {
-  description = "Command to SSH into the instancee"
+  description = "Command to SSH into the instance"
   value       = "ssh -i ${var.key_name}.pem ubuntu@${aws_instance.app_server.public_ip}"
 }
