@@ -32,3 +32,18 @@ aws/ec2_ecs/task3
 # K8S
 kubernetes/backend/.env
 kubernetes/frontend/node_modules
+
+
+# Terraform
+terraform/part_1/.terraform
+terraform/part_1/.terraform.lock.hcl
+terraform/part_1/variables.tf
+terraform/part_1/Terraform.pem
+terraform/part_1/terraform.tfstate
+terraform/part_1/terraform.tfstate.backup
+terraform/part_2/.terraform
+terraform/part_2/.terraform.lock.hcl
+terraform/part_2/variables.tf
+terraform/part_2/Terraform.pem
+terraform/part_2/terraform.tfstate
+terraform/part_2/terraform.tfstate.backup

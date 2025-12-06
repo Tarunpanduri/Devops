@@ -24,6 +24,11 @@ spec:
   selector:
     matchLabels:
       app: k8s-backend
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
   template:
     metadata:
       labels:
@@ -40,16 +45,21 @@ spec:
                 name: backend-env
           readinessProbe:
             httpGet:
-              path: /                      # change to /health if you add a health route
+              path: /health
               port: 5000
-            initialDelaySeconds: 3
+            initialDelaySeconds: 5
             periodSeconds: 5
+            failureThreshold: 3
+            successThreshold: 1
+            timeoutSeconds: 2
           livenessProbe:
             httpGet:
-              path: /                
+              path: /health
               port: 5000
-            initialDelaySeconds: 15
+            initialDelaySeconds: 20
             periodSeconds: 10
+            failureThreshold: 3
+            timeoutSeconds: 2
           resources:
             requests:
               cpu: "100m"

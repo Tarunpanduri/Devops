@@ -14,6 +14,12 @@ client = MongoClient(MONGO_URI)
 db = client["dockerr"]  
 collection = db["submissions"]  
 
+
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({"status": "ok"}), 200
+
+
 @app.route('/submit', methods=['POST'])
 def submit_data():
     data = request.json
@@ -34,6 +40,7 @@ def submit_data():
         }), 201
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
